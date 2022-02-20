@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.encabezado{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 0 auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 15px 10px 20px;
+}
+.encabezado h1{
+    font-size: 1.4rem;
+    color: white;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    /*width: 80px;
+    height: 80px;*/
+    border-radius: 5px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px
+}
+
+.score p:first-child{
+    color: hsl(229, 64%, 46%);
+    font-size: 0.7rem;
+}
+
+.score p:nth-child(2){
+    font-size: 2.3rem;
+}
+
+body{
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-color: lightblue;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(237, 49%, 15%);  
+    position: relative;
+}
+
+/*------------------MODAL-------*/
+.modal{
+    width: 375px;
+    height: 380px;
+    display:flex;
+    top: 20px;
+    right: 432px;
+    bottom: 20px;
+    flex-direction: column;
+    position:absolute;
+    margin: auto;
+    background-color: white;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.rulesTitle{
+    margin-top: 20px;
+    margin-left: 20px;
+    color: hsl(229, 25%, 31%);
+}
+
+.iconRules{
+    margin:auto;
+    margin-top:20px;
+}
+
+.iconClose{
+    position: absolute;
+    top: 27px;
+    cursor: pointer;
+    right:20px;
+    color: hsl(229, 25%, 31%);
+
+}
+.modal.active{
+    visibility: visible;
+}
+
+
+.btnRules{
+    position: absolute;
+    right: 20px;
+    top:510px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+
+}
+
+/***********************************Game****************************/
+.game{
+    display: flex;/*LLLLLLLLLLLLLLLLLLLL*/
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.game h2{
+    font-size: 2.8rem;
+    color: white;
+}
+
+#playAgain{
+    margin: 10px;
+    width: 160px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+#playAgain:hover{
+    cursor: pointer;
+}
+
+
+
+.boton{
+    display: flex; 
+    justify-content: center;
+    width: 130px;
+    height:130px;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.boton:active{
+    box-shadow:initial;
+}
+
+.azul{
+    border: 15px solid hsl(230, 89%, 62%);
+    box-shadow:inset 0 6px 0 0 rgba(0,0,0,0.3),
+            0 6px 0 0 rgba(86, 113, 245, 0.5);
+}
+
+.amarillo{
+    border:15px solid hsl(39, 89%, 49%);
+    box-shadow:inset 0 6px 0 0 rgba(0,0,0,0.3),
+            0 6px 0 0 rgba(236, 158, 14, 0.5);
+}
+
+.rojo{
+    border: 15px solid hsl(349, 71%, 52%);
+    box-shadow:inset 0 6px 0 0 rgba(0,0,0,0.3),
+            0 6px 0 0 rgba(220, 46, 78, 0.5);
+}
+.boton img{
+    margin: auto;
+    padding: 0;
+}
+
+.box{
+    width:500px;
+    height:500px;
+    display: flex;
+    justify-content:center;
+    padding: 45px;
+    margin: auto;
+    background-image: url('/images/bg-triangle.svg') no-repeat;
+}
+
+.ocultar{
+    display: none;
+}
+
+.box .azul, .box .rojo{
+    align-self:flex-start;
+}
+
+.box .amarillo{
+    align-self: center;
+}
+
+.containerHands{
+    display: none;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show{
+    display: flex;
+}
+
+
+/*Referee*/
+.referee{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+/*<div class="referee"> 
+          <div class="decision"><h1 id="final-decision"> YOU WIN! </h1></div>
+         <div class="newGame">PLAY AGAIN</div>
+        </div>*/
+.referee h1{
+    text-align: center;
+}
+.newGame{
+    background-color: #fff;
+    padding: 20px 70px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    cursor: pointer;
+}
+.computerHand h1{
+    text-align: center;
+}
+/*Vista Tablets*/
+@media (min-width: 768px){
+    .encabezado{
+        width: 55%;
+    }
+}
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/*Vista Tablets*/
+@media (min-width: 768px){
+    .encabezado{
+        width: 55%;
+    }
+}
+
+/*Vista Computadoras*/
+@media (min-width: 1200px){
+}
+
+
+
+
+.reset{
+    position: absolute;
+    bottom: 100px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
