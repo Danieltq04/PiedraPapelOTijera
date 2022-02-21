@@ -123,7 +123,8 @@ function juego(parametro, img){
         decision.textContent = 'DRAW'; 
     }else{
         console.log("Perdio, i: "+i);
-        i--;
+        (i>0)?i--:i=0;
+        //i--;
         console.log("Perdio, i: "+i);
 
         puntaje.textContent = i;
