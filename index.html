@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-  
+
   <link rel="stylesheet" href="/css/style.css">
-<!----
+  <!----
   Score
   You Picked
   The House Picked
@@ -17,86 +19,86 @@
   Play Again
 -->
 </head>
+
 <body>
-  <!--Cabecera Dani Yender-->
   <header>
-    <!--Yender voy a meter un div para centrar el header le damos un width y margin auto-->
     <div class="encabezado">
       <h1>ROCK<br>
-          PAPER <br>
-          SCISSORS
+        PAPER <br>
+        SCISSORS
       </h1>
       <div class="score">
-          <p>SCORE</p>
-          <p id="puntaje">0</p>
+        <p>SCORE</p>
+        <p id="puntaje">0</p>
       </div>
     </div>
   </header>
-  <!----Rules
-    <main class="optionBox">
-      <button id="piedra">Piedra</button>
-      <button id="papel">Papeeel</button>
-      <button id="tijera">Tijera</button>
-    </main>
-  -->
+  <main>
+    <div class="box">
+      <div id="papel" class="boton azul">
+        <img src="images/icon-paper.svg" alt="paper">
+      </div>
 
-<!---Principal buttons-->>
-  <div class="box">
-    <div id="papel" class="boton azul">
-      <img src="images/icon-paper.svg" alt="paper">
+      <div id="tijera" class="boton amarillo">
+        <img src="images/icon-scissors.svg" alt="scissors">
+      </div>
+
+      <div id="piedra" class="boton rojo">
+        <img src="images/icon-rock.svg" alt="rock">
+      </div>
     </div>
-
-    <div id="tijera" class="boton amarillo">
-      <img src="images/icon-scissors.svg" alt="scissors">
+    <div class="conteiner-modal">
+      <div class="modal">
+        <h2 class="rulesTitle">Rules</h2>
+        <img class="iconClose" src="/images/icon-close.svg">
+        <img class="iconRules" src="/images/image-rules.svg">
+      </div>
     </div>
     
-    <div id="piedra" class="boton rojo">
-      <img src="images/icon-rock.svg" alt="rock">
-    </div>
-  </div>
+    
+    <div class="containerHands">
 
-  <div class="modal">
-    <h2 class="rulesTitle">Rules</h2>
-    <img class="iconClose" src="/images/icon-close.svg">
-    <img class="iconRules" src="/images/image-rules.svg">
-  </div>
-
-  <button class="btnRules">Rules</button>
-  <button class="reset">Reset</button>
-
-
-  <!--Win or lose---->
-  <div class="containerHands">
-      
-    <div class="contest">       
-      <div class="userhand">
-        <h1>YOU PICKED</h1>
-            <div id="handImage" class="handImageContainer boton">
-              <img id="userPickImage" src="/images/icon-rock.svg">
-            </div>
-      </div>        
+      <div class="contest">
+        <div class="userhand">
+          <h1>YOU PICKED</h1>
+          <div id="handImage" class="handImageContainer boton">
+            <img id="userPickImage" src="/images/icon-rock.svg">
+          </div>
         </div>
+      </div>
 
-        <div class="referee"> 
-          <div class="decision"><h1 id="final-decision"> YOU WIN! </h1></div>
-         <div class="newGame">PLAY AGAIN</div>
+      <div class="referee">
+        <div class="decision">
+          <h1 id="final-decision"> YOU WIN! </h1>
         </div>
-        
-        <div class="computerhand">
-            <h1>THE HOUSE PICKED</h1>
-            <div id="handComputer" class="handImageContainer boton">
-              <img id="computerPickImage" src='/images/icon-paper.svg'/> 
-            </div>   
-        </div>       
-  </div>
-    
-    
-    
+        <div class="newGame">PLAY AGAIN</div>
+      </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="computerhand">
+        <h1>THE HOUSE PICKED</h1>
+        <div id="handComputer" class="handImageContainer boton">
+          <img id="computerPickImage" src='/images/icon-paper.svg' />
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+
+
+
+  <footer>
+    <div class="botones">
+      <button class="reset">RESET</button>
+      <button class="btnRules">RULES</button>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by Daniel.
+    </div>
+  </footer>
+
   <script src="app.js"></script>
 </body>
+
 </html>

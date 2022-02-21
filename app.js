@@ -1,9 +1,11 @@
 /*----Modal Function---------- */
 const iconClose = document.querySelector('.iconClose');
 const btnRules = document.querySelector('.btnRules');
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.conteiner-modal');
 
-btnRules.addEventListener('click', () => {modal.classList.add('active')});
+btnRules.addEventListener('click', () => {
+    console.log("a");
+    modal.classList.add('active')});
 iconClose.addEventListener('click', () => {modal.classList.remove('active')});
 
 
@@ -51,7 +53,7 @@ tijera.addEventListener("click",()=>{
 
 
 let puntaje = document.querySelector('#puntaje');
-let i = 1;
+let i = 0;
 
 
 
@@ -101,9 +103,10 @@ function juego(parametro, img){
     if((parametro == "piedra" && array[random] == imgScissor) || 
        (parametro == "papel" && array[random] == imgRock) ||
        (parametro == "tijera" && array[random] == imgPapel)){
-        console.log("Ganó");
-        puntaje.textContent = i++;
-        alert('Ganaste')
+        console.log("Ganó, i: "+i);
+        i++;
+        console.log("Ganó, i: "+i);
+        puntaje.textContent = i;
         decision.textContent = 'YOU WIN';
         
     }else if ((parametro == "piedra" && array[random] == imgRock) || 
@@ -111,12 +114,13 @@ function juego(parametro, img){
              (parametro == "tijera" && array[random] == imgScissor))
     {
         console.log("Empató");
-        alert('Empate')
         decision.textContent = 'DRAW'; 
     }else{
-        console.log("Perdio");
-        /*puntaje.textContent = i--;*/
-        alert('Perdiste')
+        console.log("Perdio, i: "+i);
+        i--;
+        console.log("Perdio, i: "+i);
+
+        puntaje.textContent = i;
         decision.textContent = 'LOSE';
     }
 }
