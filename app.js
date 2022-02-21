@@ -8,7 +8,10 @@ btnRules.addEventListener('click', () => {
     modal.classList.add('active')});
 iconClose.addEventListener('click', () => {modal.classList.remove('active')});
 
-
+document.querySelector(".reset").addEventListener("click", ()=>{
+    i = 0;
+    puntaje.textContent = i;
+})
 /*Logic */
 
 const piedra = document.querySelector('#piedra');
@@ -84,9 +87,12 @@ function juego(parametro, img){
 
     let random = Math.floor(Math.random() * 3);
 
-    document.querySelector('#userPickImage').src = img;
+    //document.querySelector('#userPickImage').src = img;
+    document.querySelector('#handImage').style.backgroundImage  = `url(${img})`;
 
-    document.querySelector('#computerPickImage').src = array[random];
+    //document.querySelector('#computerPickImage').src = array[random];
+    document.querySelector('#handComputer').style.backgroundImage  = `url(${array[random]})`;
+    
     box.classList.add('ocultar');
     containerHands.classList.add('show');
 
