@@ -227,7 +227,7 @@ body{
     justify-content:center;
     /*padding: 45px;*/
     margin: auto;
-    background-image: url('/images/bg-triangle.svg');
+    background-image: url('./images/bg-triangle.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 70%;
@@ -389,13 +389,13 @@ body{
     background-size: 68%;
 }
 #piedra{
-    background-image: url("/images/icon-rock.svg");
+    background-image: url("./images/icon-rock.svg");
 }
 #papel{
-    background-image: url("/images/icon-paper.svg");
+    background-image: url("./images/icon-paper.svg");
 }
 #tijera{
-    background-image: url("/images/icon-scissors.svg");
+    background-image: url("./images/icon-scissors.svg");
 }
 
 #handImage, #handComputer{
