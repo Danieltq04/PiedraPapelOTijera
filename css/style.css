@@ -178,8 +178,10 @@ body{
 .boton{
     display: flex; 
     justify-content: center;
-    width: 130px;
-    height:130px;
+    /*width: 130px;
+    height: 130px;*/
+    width: 90px;
+    height: 90px;
     background-color: #fff;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -217,7 +219,7 @@ body{
 
 .box{
     width:500px;
-    height:350px;
+    height:290px;
     display: flex;
     justify-content:center;
     /*padding: 45px;*/
@@ -242,7 +244,7 @@ body{
 
 .containerHands{
     display: none;
-    width: 75%;
+    width: 100%;
     grid-template-columns: 1fr .3fr 1fr;
 }
 
@@ -267,12 +269,8 @@ body{
 }
 .newGame{
     background-color: #fff;
-    padding: 15px 40px;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+    padding: 10px 20px;
+    border-radius: 30%;
     cursor: pointer;
     font-size: 20px;
     text-align: center;
@@ -296,17 +294,6 @@ body{
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-
-/*Vista Tablets*/
-@media (min-width: 768px){
-    .encabezado{
-        width: 55%;
-    }
-}
-
-/*Vista Computadoras*/
-@media (min-width: 1200px){
-}
 
 
 
@@ -361,4 +348,45 @@ body{
     padding-bottom: 5%;
     font-size: 20px;
     text-align: center;
+}
+
+
+
+
+/*Vista Tablets*/
+@media (min-width: 768px){
+    .box{
+        height:350px;
+    }
+    .boton{
+        width: 130px;
+        height: 130px;
+    }
+    .containerHands{
+        width: 75%;
+    }
+    .newGame{
+        padding: 15px 40px;
+        border-radius: 30%
+    }
+}
+
+/*Vista Computadoras*/
+@media (min-width: 1200px){
+    
+    
+}
+.box > div{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 68%;
+}
+#piedra{
+    background-image: url("/images/icon-rock.svg");
+}
+#papel{
+    background-image: url("/images/icon-paper.svg");
+}
+#tijera{
+    background-image: url("/images/icon-scissors.svg");
 }
