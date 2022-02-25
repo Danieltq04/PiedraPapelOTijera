@@ -65,10 +65,8 @@ footer{
 
 body{
     box-sizing: border-box;
-    background-color: lightblue;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    background: radial-gradient(circle, #297248 50%, #14391f);
-
+    background: radial-gradient( circle at 50% 0%, hsl(214, 47%, 23%) 50%, hsl(237, 49%, 15%) 100% );
 }
 
 /*------------------MODAL-------*/
